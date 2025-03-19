@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
 // MongoDB connection
 const connectDB = async () => {
     try {
-        await mongoose.connect(MONGOURL, { useNewUrlParser: true});
+        await mongoose.connect(MONGOURL, {});
         console.log("DB is connected");
     } catch (error) {
         console.log("DB is not connected", error.message);
